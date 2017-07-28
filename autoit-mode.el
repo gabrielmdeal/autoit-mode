@@ -184,7 +184,7 @@ See `autoit-prepare-function-definitions'")
 (defun autoit-enable-eldoc ()
   "Setup and enable ElDoc minor mode for AutoIt source files."
   (set (make-local-variable 'eldoc-documentation-function) 'autoit-documentation-function)
-  (turn-on-eldoc-mode)
+  (eldoc-mode)
   (with-temp-buffer
     (insert-file-contents autoit-eldoc-predefined-functions-cache)
     (let ((hash (read (current-buffer))))
